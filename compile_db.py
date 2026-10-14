@@ -25,14 +25,16 @@ OBJLIST_PATCHES = [ # make it look like a refinery
     (6588, 1731, 6098, '4207000096684843d0b7db43000000000000000000000000000000000000'),
     (6588, 1732, 6100, '4307000014714f439324dd430000000000000000000000000000b4420000'),
     (6588, 1733, 6096, 'b80700004a914a431fb4dd43000000000000000000000000000000000000'),
-    (9039, 6, 5274, '74090000603c2a4000f4ac40000000000000000000000000000034439800'),   #Attempt at fixing the goldmine crash, changing the fence
+    (9039, 6, 5274, '74090000603c2a4000f4ac40000000000000000000000000000034439800')   #Attempt at fixing the goldmine crash, changing the fence
 ]
 # (object id, reference property, expected old id, new id)
 REF_PATCHES = [
     (6490, "ConnectedJunction2", 6500, -1),  # Tell the cpu in sp4 that it is not connected to mine 1 and 2 at the beginning of the game so it builds the tracks
     (6490, "ConnectedJunction3", 6502, -1),  # sp4 cpu: not connected to mine 2 at the start
     (6490, "Locomotive2", -1, 360),          # second Consolidation
-    (6490, "LocomotiveJunction2", -1, 6495) # delivered at SilverCity
+    (6490, "LocomotiveJunction2", -1, 6495), # delivered at SilverCity
+    (6333, "ConnectedJunction2", 6362, -1),  # sp2 cpu: not connected to lumberyard3 at the start
+     (6333, "Locomotive2", 351, 372)  # sp2 cpu: second locomotive Fireless -> Decapod
 ]
 U32, I32, F32 = struct.Struct("<I"), struct.Struct("<i"), struct.Struct("<f")
 
